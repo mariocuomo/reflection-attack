@@ -26,4 +26,13 @@ The client can also send a challenge-response to the server to authenticate it. 
 </div>
 
 
-Seems all right, right?
+Seems all right, right? <br>
+In several mutual authentication protocols the authentication mechanisms are the same for both _user->server_ and _server->user_ authentication. Often the same keys are used to hashing challenges and server authentication can be execute before the one about the user! <br>
+The Reflection Attack exploits use all of these vulnerabilities together to break authentication protocol. <br>
+The idea is to ask the server to respond to the challenge sent by it previously. <br>
+
+1. user opens a new authentication request with the server
+2. server replies with an R challenge
+3. user opens a second connection with the server, this time asking for its authentication by sending it an R challenge.
+4. server responds with the hashing of R
+5. user lefts the second communication and uses the hashing obtained to respond to the first challenge

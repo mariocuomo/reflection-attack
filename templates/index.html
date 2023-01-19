@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='index.css') }}">
+	<title>HOME PAGE</title>
+</head>
+<body>
+	<div class="row full-height">
+		<div class="column left">
+		</div>
+
+		<div class="column middle" style="border: thin solid lightblue;">
+			<div align="center">
+				<h1>WELCOME</h1>
+				<img src="{{ url_for('static',filename='images/mirror.png') }}" width="150" height="150">
+				<p>
+					THIS WEB SERVICE MAY BE VULNERABLE TO REFLECTION ATTACK<br>
+					We simulate a client trying to authenticate by applying the reflection attack<br>
+					To enable/disable the protection use the following button<br>
+				</p>
+				
+				<form action="{{url_for('execute_client')}}" method="post">
+					<div>
+						<label class="toggle">
+						    <input type="checkbox" name="check">
+						    <span class="slider"></span>
+						    <span class="labels" data-on="ON" data-off="OFF"></span>
+					  	</label>
+					</div>
+
+					<input type="submit" value="simulate">
+				</form>
+
+				{%for i in range(0, len)%}
+					<div>
+		  				<span><i>{{closed_users[i][0]}}</i> is {{closed_users[i][1]}}</span>
+					</div>
+
+				{%endfor%}
+
+			</div>
+		</div>
+
+		<div class="column right">
+			<p style="color:grey;font-size:10px; writing-mode: tb-rl;">@credit Mario Cuomo </p>
+		</div>
+	</div>
+
+</body>
+</html>

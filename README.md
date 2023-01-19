@@ -14,6 +14,10 @@ Users must demonstrate that they know the pre-shared key. It is obvious that the
 One way is to use a **_challenge-response approach_**. <br>
 When a user requests a connection to the server, it replies with a _challenge_: it sends him a string that the user must encrypt using the shared-key and then return it to the server. The server also performs hash in local and checks if it matches with the received one. <br>
 
+<div align=center>
+ <img src="https://github.com/mariocuomo/reflection-attack/blob/main/images_readme/challenge-response.png">
+</div>
+
 Likewise, the user must also be convinced that he is communicating with the real web server. <br>
 The client can also send a challenge-response to the server to authenticate it. <br>
 

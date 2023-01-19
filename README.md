@@ -21,4 +21,9 @@ When a user requests a connection to the server, it replies with a _challenge_: 
 Likewise, the user must also be convinced that he is communicating with the real web server. <br>
 The client can also send a challenge-response to the server to authenticate it. <br>
 
+<div align=center>
+ <img src="https://github.com/mariocuomo/reflection-attack/blob/main/images_readme/mutual-authentication.png">
+</div>
+
+
 Seems all right, right?

@@ -33,6 +33,6 @@ The idea is to ask the server to respond to the challenge sent by it previously.
 
 1. user opens a new authentication request with the server
 2. server replies with a challenge R
-3. user opens a second connection with the server, this time asking for its authentication by sending it a challenge R (the previous one!).
+3. user opens a second connection with the server, this time asking for its authentication by sending it a challenge R (the previous one!)
 4. server responds with the hashing of R
 5. user lefts the second communication and uses the hashing obtained to respond to the first challenge

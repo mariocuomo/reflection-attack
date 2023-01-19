@@ -36,3 +36,16 @@ The idea is to ask the server to respond to the challenge sent by it previously.
 3. user opens a second connection with the server, this time asking for its authentication by sending it a challenge R (the previous one!)
 4. server responds with the hashing of R
 5. user left the second communication and uses the hashing obtained to respond to the first challenge
+
+<div align=center>
+ <img src="https://github.com/mariocuomo/reflection-attack/blob/main/images_readme/reflection-attack.png">
+</div>
+
+user can authenticate itself without knowing the key! <br>
+
+
+How to protect web server from reflection attack?<br>
+A very simple method is to associate the mac - Message message authentication Code - to the message. <br>
+A second method, which is the one implemented, is to break the symmetry of the requests: the server only responds to challenges of the type ```R+'|client'``` and only offers challenges to users such as ```R+'|server```. <br>
+An important insight [here](https://cwe.mitre.org/data/definitions/301.html).
+

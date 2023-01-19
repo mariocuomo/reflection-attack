@@ -1,6 +1,25 @@
 # Reflection Attack
 This repository contains a toy example of a reflection attack for an authentication method 
 
+<div align=center>
+ <img src="https://github.com/mariocuomo/reflection-attack/blob/main/images_readme/flask-app.png">
+</div>
+
+The web server is developed using python and flask. <br>
+To start it execute the following command and visit http://127.0.0.1:5000.
+
+```console
+mario@mario-lap:~$ python run.py 
+
+* Serving Flask app "run" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+```
+
 Think the following situation. <br>
 There is a web server that offers a service to authenticated users only.<br>
 Authenticate a user means being sure that they are really who they say they are. <br>
